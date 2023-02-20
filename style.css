@@ -56,6 +56,9 @@ a{
 .nav_list a:hover{
     color: #fb1;
 }
+.menu_button{
+    display: none;
+}
 section#home{
     height: calc(100vh + 80px);
     display: grid;
@@ -72,6 +75,9 @@ section#home{
     flex-direction: column;
     gap: 1rem;
     text-align: justify;
+}
+.home_position{
+    font-size: 19px;
 }
 .home_info h3{
     font-size: 30px;
@@ -235,17 +241,59 @@ footer{
 }
 @media (max-width: 40rem){
     header{
-        justify-content: center;
+        justify-content: space-between;
     }
     main{
         width: 100vw;
+    }
+    .nav_list{
+        z-index: 500;
+        position: fixed;
+        height: 100vh;
+        width: 75%;
+        top: 0;
+        right: -100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right .3s;
+    }
+    .menu .menu_open{
+        display: block;
+    }
+    .menu .menu_close{
+        display: none;
+    }
+    .open .nav_list {
+        right: 0;
+    }
+    .open .menu_open{
+        display: none;
+    }
+    .open .menu_close{
+        display: block;
+    }
+    .menu_button{
+        display: inline-block;
+        z-index: 1000;
     }
     section#home{  
         padding: 0 15px ;
         padding-top: 5rem;
         grid-template-columns: 1fr;
     }
-    
+    .home_position{
+        font-size: 15px;
+    }
+    .home_info h3{
+        font-size: 19px;
+        font-weight: 600;
+    }
+    .home_buttons{
+        display: flex;
+        justify-content: space-around;
+    }
     .home_info,
     .image{
         width: 100%;
