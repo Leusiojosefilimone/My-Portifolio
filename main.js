@@ -31,3 +31,9 @@ var swiper = new Swiper(".mySwiper", {
     mausewheel: true,
     keyboard: true
 })
+
+const menu = document.querySelector('.menu')
+
+function ToggleMenu(){
+  menu.classList.toggle('open')
+}
