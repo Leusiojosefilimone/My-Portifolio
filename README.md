@@ -1,2 +1,2 @@
 # My-Portifolio
-Applying React knowledge building my portfolio
+Applying html css and javascript knowledge building my portfolio
