@@ -1,0 +1,117 @@
+@media (max-width: 40rem) {
+  :root {
+    --primary-color: #333;
+    --light-orange: #fb1;
+    --body-background-color: white;
+  }
+  .dark {
+    --primary-color: #fff;
+    --body-background-color: black;
+    background-color: var(--body-background-color);
+  }
+  header {
+    justify-content: space-between;
+  }
+  main {
+    width: 100vw;
+  }
+  .nav_list {
+    z-index: 500;
+    position: fixed;
+    height: 100vh;
+    width: 75%;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s;
+    background-color: var(--body-background-color);
+  }
+  .menu .menu_open {
+    background-color: var(--body-background-color);
+    display: block;
+  }
+  .menu .menu_close {
+    display: none;
+  }
+  .open .nav_list {
+    right: 0;
+  }
+
+  .open .menu_open {
+    display: none;
+  }
+  .open .menu_close {
+    display: block;
+  }
+  .menu_button {
+    display: flex;
+    z-index: 1000;
+  }
+  .menu_button i {
+    cursor: pointer;
+    padding: 10px;
+  }
+  section#home {
+    margin-top: 2rem;
+    padding: 0 15px;
+    padding-top: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .home_position {
+    font-size: 15px;
+  }
+  .home_info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .home_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-around;
+  }
+  .home_info button::before {
+    animation: pulse 2s step-end infinite;
+  }
+  .home_info button::after {
+    animation: pulse 1.5s step-end infinite;
+  }
+  .home_buttons button {
+    margin: 0;
+    width: 100%;
+  }
+  .home_info {
+    grid-row: 2/3;
+  }
+  .image {
+    grid-row: 1/2;
+  }
+  .swiper-slide {
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  .project-info,
+  .project-img,
+  .project-img a,
+  .project-img img {
+    width: 100%;
+  }
+  .skills__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+
+  input,
+  textarea,
+  button {
+    width: 100%;
+  }
+}
